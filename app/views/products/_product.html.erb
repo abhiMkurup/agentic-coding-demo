@@ -1,0 +1,11 @@
+<div id="<%= dom_id product %>">
+  <h2><%= product.name %></h2>
+
+  <% if product.featured_image.attached? %>
+    <%= image_tag product.featured_image, width: 300 %>
+  <% end %>
+
+  <%= product.description %>
+
+  <p><%= product.inventory_count.positive? ? "In stock" : "Out of stock" %></p>
+</div>
